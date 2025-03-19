@@ -1,2 +1,2 @@
 # Project-rotation1
-project for genome assembly
+This repository contains code and instructions for genome assembly analysis.
