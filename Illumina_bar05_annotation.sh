@@ -7,8 +7,8 @@
 #SBATCH --mem=100g
 #SBATCH --time=02:00:00
 #SBATCH --job-name=my_job
-#SBATCH --output=//share/BioinfMSc/rotation1/Group1/Illumina//bar5outputslurm-%x-%j.out
-#SBATCH --error=/share/BioinfMSc/rotation1/Group1/Illumina//bar5outputslurm-%x-%j.err
+#SBATCH --output=//share/BioinfMSc/rotation1/Group1/Illumina//bar5output/slurm-%x-%j.out
+#SBATCH --error=/share/BioinfMSc/rotation1/Group1/Illumina//bar5output/slurm-%x-%j.err
 #SBATCH --mail-type=ALL
 #SBATCH --mail-alyjh38@nottingham.ac.uk
 
