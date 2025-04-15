@@ -13,7 +13,8 @@
 #SBATCH --mail-user=alyjh38@nottingham.ac.uk
 
 source $HOME/.bash_profile
-conda activate ro1_nanoplot
+
+conda activate unicycler_env 
 
 unicycler -1 bar5merged_forward.fastq.gz -2 bar5merged_reverse.fastq.gz -o bar5output
 
