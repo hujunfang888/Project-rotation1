@@ -10,7 +10,7 @@
 #SBATCH --output=//share/BioinfMSc/rotation1/Group1/bash_script/slurm-%x-%j.out
 #SBATCH --error=/share/BioinfMSc/rotation1/Group1/bash_script/slurm-%x-%j.err
 #SBATCH --mail-type=ALL
-#SBATCH --mail-alyjh38@nottingham.ac.uk
+#SBATCH --mail-user=alyjh38@nottingham.ac.uk
 
 source $HOME/.bash_profile
 
