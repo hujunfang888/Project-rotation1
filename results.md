@@ -1,4 +1,4 @@
-# Group 1 – Barcode05 Illumina Assembly and Annotation
+# Group 1 – Barcode05 Illumina Assembly and Annotation。
 
 ## Assembly (Illumina only)
 
