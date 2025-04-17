@@ -72,14 +72,16 @@ conda install -c bioconda bandage
 
 **FastQC Reports:**
 
-- [Forward reads (barcode01)](https://hujunfang888.github.io/Project-rotation1/qc_reports/merged_forward_fastqc.html)
-- [Reverse reads (barcode01)](https://hujunfang888.github.io/Project-rotation1/qc_reports/merged_reverse_fastqc.html)
-- [MultiQC summary](https://hujunfang888.github.io/Project-rotation1/qc_reports/fastqc_report.html)
+- [Forward reads (barcode01)](https://hujunfang888.github.io/Project-rotation1/merged_forward_fastqc.html)
+- [Reverse reads (barcode01)](https://hujunfang888.github.io/Project-rotation1/merged_reverse_fastqc.html)
+- [MultiQC summary](https://hujunfang888.github.io/Project-rotation1/fastqc_report.html)
+
 
 **QUAST Assembly Reports:**
 
-- [Long-read assembly (barcode01)](https://hujunfang888.github.io/Project-rotation1/qc_reports/QUAST_longreads.html)
-- [Hybrid assembly (barcode01)](https://hujunfang888.github.io/Project-rotation1/qc_reports/QUAST_hybrid.html)
+- [Long-read assembly (barcode01)](https://hujunfang888.github.io/Project-rotation1/QUAST_longreads.html)
+- [Hybrid assembly (barcode01)](https://hujunfang888.github.io/Project-rotation1/QUAST_hybrid.html)
+
 ---
 
 ## References
