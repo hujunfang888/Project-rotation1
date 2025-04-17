@@ -2,6 +2,10 @@
 
 This page summarizes the QUAST and fastqc (Illumina) output statistics for barcode01 using three different assembly strategies.
 
+### Note on barcode05 QC
+
+We did not perform separate FastQC or QUAST quality control for barcode05 due to time and resource constraints.  However, barcode05 was assembled using Illumina reads only, and the successful Prokka annotation suggests that the data quality was sufficient for downstream analysis.
+
 ---
 
 ## Barcode01 – Hybrid 
