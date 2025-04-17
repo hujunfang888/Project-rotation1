@@ -39,8 +39,6 @@ conda install -c bioconda bandage
 
 ---
 
----
-
 ## Data
 
 ### Input files
@@ -56,7 +54,7 @@ conda install -c bioconda bandage
 | `Long_read_assemble/output_dir/assembly.fasta` | Long-read assembly (bar01) |
 | `pass_hybrid/assembly.fasta` | Hybrid assembly (bar01) |
 
-### Output files
+###  Output files
 
 | File | Description |
 |------|-------------|
@@ -67,4 +65,3 @@ conda install -c bioconda bandage
 | `PROKKA_02132025.gff` | Annotation (bar01 hybrid) |
 | `PROKKA_02132025.txt` | Summary stats (bar01 hybrid) |
 | `*.png` | Bandage graph screenshots |
-
