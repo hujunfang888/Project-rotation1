@@ -1,4 +1,4 @@
-# QUAST Summary – Assembly Quality Comparison
+# QC Summary – Assembly Quality Comparison
 
 This page summarizes the QUAST and fastqc (Illumina) output statistics for barcode01 using three different assembly strategies.
 
