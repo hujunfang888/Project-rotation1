@@ -35,6 +35,7 @@ conda activate prokka_env
 
 # Bandage (visualization)
 conda install -c bioconda bandage
+```
 
 ---
 
@@ -63,4 +64,21 @@ conda install -c bioconda bandage
 | `PROKKA_02062025.txt` | Summary stats (bar01 long) |
 | `PROKKA_02132025.gff` | Annotation (bar01 hybrid) |
 | `PROKKA_02132025.txt` | Summary stats (bar01 hybrid) |
-| `*.png` | Bandage graph screenshots |
+| `*.png` | Bandage graph screenshots 
+
+---
+
+---
+
+## Quality Control & Assembly Evaluation
+
+**FastQC Reports:**
+
+- [Forward reads (barcode01)](https://hujunfang888.github.io/Project-rotation1/qc_reports/merged_forward_fastqc.html)
+- [Reverse reads (barcode01)](https://hujunfang888.github.io/Project-rotation1/qc_reports/merged_reverse_fastqc.html)
+- [MultiQC summary](https://hujunfang888.github.io/Project-rotation1/qc_reports/fastqc_report.html)
+
+**QUAST Assembly Reports:**
+
+- [Long-read assembly (barcode01)](https://hujunfang888.github.io/Project-rotation1/qc_reports/QUAST_longreads.html)
+- [Hybrid assembly (barcode01)](https://hujunfang888.github.io/Project-rotation1/qc_reports/QUAST_hybrid.html)
