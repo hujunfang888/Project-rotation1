@@ -68,8 +68,6 @@ conda install -c bioconda bandage
 
 ---
 
----
-
 ## Quality Control & Assembly Evaluation
 
 **FastQC Reports:**
@@ -82,3 +80,16 @@ conda install -c bioconda bandage
 
 - [Long-read assembly (barcode01)](https://hujunfang888.github.io/Project-rotation1/qc_reports/QUAST_longreads.html)
 - [Hybrid assembly (barcode01)](https://hujunfang888.github.io/Project-rotation1/qc_reports/QUAST_hybrid.html)
+---
+
+## References
+
+- **Unicycler**: Wick RR, et al. (2017). *Unicycler: Resolving bacterial genome assemblies from short and long sequencing reads.* [PLOS Computational Biology](https://doi.org/10.1371/journal.pcbi.1005595)
+- **Prokka**: Seemann T. (2014). *Prokka: Rapid prokaryotic genome annotation.* [Bioinformatics](https://doi.org/10.1093/bioinformatics/btu153)
+- **SPAdes**: Bankevich A, et al. (2012). *SPAdes: A new genome assembly algorithm and its applications to single-cell sequencing.* [Journal of Computational Biology](https://doi.org/10.1089/cmb.2012.0021)
+- **Bandage**: Wick RR, et al. (2015). *Bandage: Interactive visualization of de novo genome assemblies.* [Bioinformatics](https://doi.org/10.1093/bioinformatics/btv383)
+- **FastQC**: [https://www.bioinformatics.babraham.ac.uk/projects/fastqc/](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
+- **MultiQC**: Ewels P, et al. (2016). *MultiQC: Summarize analysis results for multiple tools and samples in a single report.* [Bioinformatics](https://doi.org/10.1093/bioinformatics/btw354)
+- **QUAST**: Gurevich A, et al. (2013). *QUAST: quality assessment tool for genome assemblies.* [Bioinformatics](https://doi.org/10.1093/bioinformatics/btt086)
+- **Minimap2**: Li H. (2018). *Minimap2: pairwise alignment for nucleotide sequences.* [Bioinformatics](https://doi.org/10.1093/bioinformatics/bty191)
+- **Samtools**: Danecek P, et al. (2021). *Twelve years of SAMtools and BCFtools.* [GigaScience](https://doi.org/10.1093/gigascience/giab008)
