@@ -39,6 +39,8 @@ conda install -c bioconda bandage
 
 ---
 
+---
+
 ## Data
 
 ### Input files
@@ -47,16 +49,22 @@ conda install -c bioconda bandage
 |------|-------------|
 | `bar5merged_forward.fastq.gz` | Illumina forward reads (barcode05) |
 | `bar5merged_reverse.fastq.gz` | Illumina reverse reads (barcode05) |
-| `bar5_pass_merged.fastq.gz` | long reads (barcode05) |
-| `001_spades_graph_k069.gfa` | Assembly graph (SPAdes, k=69, Illumina-only) |
-| `assembly_bar05.fasta` | Final contigs (from `.gfa`, used for annotation) |
-
+| `bar5_pass_merged.fastq.gz` | Long reads (ONT, barcode05) |
+| `Merged_pass.fastq.gz` | Long reads (ONT, barcode01) |
+| `001_spades_graph_k069.gfa` | Illumina assembly graph (bar05) |
+| `assembly_bar05.fasta` | Contigs extracted from `.gfa` (bar05 Illumina) |
+| `Long_read_assemble/output_dir/assembly.fasta` | Long-read assembly (bar01) |
+| `pass_hybrid/assembly.fasta` | Hybrid assembly (bar01) |
 
 ### Output files
 
 | File | Description |
 |------|-------------|
-| `assembly_bar05.fasta` | Extracted contigs used for annotation |
-| `annotated_bar05.gff` | Prokka annotation result |
-| `annotated_bar05.txt` | Summary of gene features |
-| `*.png` | Bandage graph screenshots (for structure visualization) |
+| `annotated_bar05.gff` | Annotation (bar05 Illumina) |
+| `annotated_bar05.txt` | Summary stats (bar05) |
+| `PROKKA_02062025.gff` | Annotation (bar01 long reads) |
+| `PROKKA_02062025.txt` | Summary stats (bar01 long) |
+| `PROKKA_02132025.gff` | Annotation (bar01 hybrid) |
+| `PROKKA_02132025.txt` | Summary stats (bar01 hybrid) |
+| `*.png` | Bandage graph screenshots |
+
