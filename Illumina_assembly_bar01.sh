@@ -13,8 +13,10 @@
 #SBATCH --mail-user=alyjh38@nottingham.ac.uk
 
 source $HOME/.bash_profile
+
 conda activate ro1_nanoplot
 
 unicycler -1 merged_forward.fastq.gz -2 merged_reverse.fastq.gz -o output_dir
 
+conda deactivate
 
