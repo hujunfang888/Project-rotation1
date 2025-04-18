@@ -86,7 +86,8 @@ conda install -c bioconda bandage
 
 # IGV Visualisation of barcode01 and barcode05
 
-This folder contains IGV screenshots comparing long-read and Illumina short-read alignments for barcode01 and barcode05. The goal is to highlight structural and coverage differences between the two samples.
+[See IGV screenshot comparison here](./igv_visualisation/README.md)
+
 
 ---
 
@@ -102,8 +103,6 @@ This folder contains IGV screenshots comparing long-read and Illumina short-read
 
 **Interpretation:**  
 These differences may be due to structural variation or differences in assembly quality between the two samples.
-
----
 
 ## Long-read comparison (Nanopore)
 
