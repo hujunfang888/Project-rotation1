@@ -7,7 +7,7 @@ This file summarizes the genome assembly and annotation results for samples barc
 ## Sample: Barcode01
 
 ### Illumina-only Assembly
-- **Assembler:** Unicycler (SPAdes)  
+- **Assembler:** Unicycler  
 - **Contigs:** 154  
 - **Total length:** 3,891,985 bp  
 - **GC content:** 65.74%  
@@ -22,7 +22,7 @@ This file summarizes the genome assembly and annotation results for samples barc
 
 **Bandage Graph Summary:**  
 The graph is highly fragmented with no apparent circular contig. Over 300 contigs cluster in a tangled central region, indicating that Illumina-only data struggles to resolve full genomic structure.  
-![barcode01 illumina](figures/barcode01_illumina_bandage.png)
+![barcode01 illumina](figures/bandage_Illumina_bar01.png)
 
 ---
 
@@ -42,12 +42,12 @@ The graph is highly fragmented with no apparent circular contig. Over 300 contig
 
 **Bandage Graph Summary:**  
 A clean and simple graph with a single large circular contig and two small unconnected ones. This reflects a high-contiguity assembly with likely full chromosomal recovery.  
-![barcode01 long-read](figures/barcode01_longread_bandage_labeled.png)
+![barcode01 long-read](figures/bandage_longreads_bar01.png)
 
 ---
 
 ### Hybrid Assembly
-- **Assembler:** Unicycler hybrid mode  
+- **Assembler:** Unicycler  
 - **Contigs:** 3  
 - **Total length:** 4,009,219 bp  
 - **GC content:** 65.49%  
@@ -62,18 +62,16 @@ A clean and simple graph with a single large circular contig and two small uncon
 
 **Bandage Graph Summary:**  
 Graph structure nearly identical to the long-read assembly, confirming that hybrid sequencing provides strong structural accuracy. All three contigs are clearly resolved.  
-![barcode01 hybrid](figures/barcode01_hybrid_bandage.png)
+![barcode01 hybrid](figures/bandage_hybrid_bar01.png)
 
 ---
 
 ## Sample: Barcode05
 
 ### Illumina-only Assembly
-- **Assembler:** Unicycler (SPAdes)  
+- **Assembler:** Unicycler 
 - **Contigs:** 737  
-- **Total length:** 3,965,967 bp  
-- **GC content:** N/A  
-- **N50 / L50:** Not reliable due to fragmentation  
+- **Total length:** 3,965,967 bp    
 
 **Prokka Annotation Summary:**  
 - CDS: 3917  
@@ -82,8 +80,8 @@ Graph structure nearly identical to the long-read assembly, confirming that hybr
 - Repeat regions: 3  
 
 **Bandage Graph Summary:**  
-Severely fragmented graph with 700+ contigs and no major circular structures. The layout is dense and tangled, reflecting a low-continuity assembly.  
-![barcode05 illumina](figures/barcode05_illumina_bandage.png)
+Severely fragmented graph with 700+ contigs and no major circular structures. A highly fragmented structure with more contigs than barcode01. The complexity suggests lower continuity, likely due to incomplete assembly from short reads.  
+![barcode05 illumina](figures/bandage_Illumina_bar05.png)
 
 ---
 
@@ -102,8 +100,8 @@ Severely fragmented graph with 700+ contigs and no major circular structures. Th
 - Repeat regions: 3
 
 **Bandage Graph Summary:**  
-One complete circular contig and two smaller segments are visible, mirroring the barcode01 graph and suggesting a similar genome architecture.  
-![barcode05 long-read](figures/barcode05_longread_bandage_labeled.png)
+Similar to barcode01, this long-read assembly shows a dominant circular contig with two smaller components, supporting good genome completeness.
+![barcode05 long-read](figures/bandage_longreads_bar05.png)
 
 ---
 
@@ -122,8 +120,8 @@ One complete circular contig and two smaller segments are visible, mirroring the
 - Repeat regions: 3
 
 **Bandage Graph Summary:**  
-The hybrid assembly is essentially identical to the long-read result. The graph shows a circular chromosome and two accessory elements with good read depth.  
-![barcode05 hybrid](figures/barcode05_hybrid_bandage.png)
+This hybrid assembly displays a complete circular contig along with two accessory contigs, mirroring the long-read result and confirming consistency. 
+![barcode05 hybrid](figures/bandage_hybrid_bar05.png)
 
 ---
 
