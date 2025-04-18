@@ -4,6 +4,12 @@ This repository contains all scripts, results, and documentation for the analysi
 
 We performed genome assembly, annotation, structure comparison, and method evaluation for each sample.
 
+
+## Navigation
+
+-  [Assembly Results & Bandage Graphs](./results.md)
+-  [IGV Mapping Visualisation](./igv_visualisation/IGV_visualisation.md)
+
 ---
 
 ## Introduction
