@@ -52,3 +52,8 @@ We did not perform separate FastQC or QUAST quality control for barcode05 due to
 - **Mismatches per 100kbp**: 840.46  
 - **Indels per 100kbp**: 29.90  
 
+---
+In conclusion, all datasets passed basic QC metrics.
+llumina reads showed high quality throughout, while long-read data had higher error rates as expected.
+No adapter contamination or major quality drop-offs were observed.
+
