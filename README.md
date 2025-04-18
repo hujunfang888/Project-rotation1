@@ -76,30 +76,42 @@ In this project, we worked with two bacterial samples (barcode01 and barcode05),
 
 ### Input files
 
+This project used Illumina and Nanopore sequencing data for two bacterial samples (barcode01 and barcode05), followed by multiple assemblies and reference-based comparisons.
+
 | File | Description |
 |------|-------------|
+| `bar01_merged_forward.fastq.gz` | Illumina forward reads (barcode01) |
+| `bar01_merged_reverse.fastq.gz` | Illumina reverse reads (barcode01) |
 | `bar5merged_forward.fastq.gz` | Illumina forward reads (barcode05) |
 | `bar5merged_reverse.fastq.gz` | Illumina reverse reads (barcode05) |
-| `bar5_pass_merged.fastq.gz` | Long reads (ONT, barcode05) |
-| `Merged_pass.fastq.gz` | Long reads (ONT, barcode01) |
-| `001_spades_graph_k069.gfa` | Illumina assembly graph (bar05) |
-| `assembly_bar05.fasta` | Contigs extracted from `.gfa` (bar05 Illumina) |
-| `Long_read_assemble/output_dir/assembly.fasta` | Long-read assembly (bar01) |
-| `pass_hybrid/assembly.fasta` | Hybrid assembly (bar01) |
+| `Merged_pass.fastq.gz` | Nanopore long reads (barcode01) |
+| `bar5_pass_merged.fastq.gz` | Nanopore long reads (barcode05) |
+| `001_spades_graph_k069.gfa` | Illumina-only assembly graph (barcode05, from SPAdes) |
+| `Long_read_assemble/output_dir/assembly.gfa` | Long-read assembly graph (barcode01, for Bandage) |
+| `Long_read_assemble/output_dir/assembly.fasta` | Long-read assembly contigs (barcode01) |
+| `Bar5/long_assembly/pass_lra/assembly.fasta` | Long-read assembly contigs (barcode05) |
+| `Illumina/pass_hybrid/assembly.fasta` | Hybrid assembly output (barcode01, Unicycler) |
+| `Bar5/pass_hybrid_bar5/assembly.fasta` | Hybrid assembly output (barcode05, Unicycler) |
+| `CP001953.1.fasta` | NCBI reference genome used for long-read mapping in IGV |
 
 ###  Output files
 
+
+Output files include annotation results, assembly evaluation, read alignments, and visualisations for each strategy and sample.
+
 | File | Description |
 |------|-------------|
-| `annotated_bar05.gff` | Annotation (bar05 Illumina) |
-| `annotated_bar05.txt` | Summary stats (bar05) |
-| `PROKKA_02062025.gff` | Annotation (bar01 long reads) |
-| `PROKKA_02062025.txt` | Summary stats (bar01 long) |
-| `PROKKA_02132025.gff` | Annotation (bar01 hybrid) |
-| `PROKKA_02132025.txt` | Summary stats (bar01 hybrid) |
-| `*.png` | Bandage graph screenshots 
+| `annotated_bar05.gff` / `.txt` | Prokka output (barcode05 – Illumina-only) |
+| `PROKKA_02102025.gff` / `.txt` | Prokka output (barcode05 – long-read) |
+| `PROKKA_02132025.gff` / `.txt` | Prokka output (barcode05 – hybrid) |
+| `PROKKA_02072025.gff` / `.txt` | Prokka output (barcode01 – Illumina-only) |
+| `PROKKA_02062025.gff` / `.txt` | Prokka output (barcode01 – long-read) |
+| `PROKKA_02132025.gff` / `.txt` | Prokka output (barcode01 – hybrid) |
+| `quast/report.txt` | QUAST summary metrics for assemblies (contigs, N50, GC%) |
+| `*.bam` / `*.bai` | Read alignments from BWA (Illumina) or minimap2 (long-read) |
+| `bandage_*.png` | Assembly graph visualisations from Bandage |
+| `igv_visualisation/Figure1–5.png` | IGV screenshots comparing barcode01 and barcode05 |
 
----
 
 ## Quality Control & Assembly Evaluation
 
