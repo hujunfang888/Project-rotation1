@@ -119,7 +119,8 @@ In this project, we worked with two bacterial samples (barcode01 and barcode05),
 
 # IGV Visualisation of barcode01 and barcode05
 
-[See IGV screenshot comparison here](./igv_visualisation/README.md)
+[IGV visualisation summary (barcode01 & barcode05)](./igv_visualisation/IGV_visualisation.md)
+
 
 
 ---
