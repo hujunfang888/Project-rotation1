@@ -5,7 +5,7 @@ This folder contains IGV screenshots comparing alignment results between barcode
 ## 1. Illumina Read Alignments (against `assembly_bar05.fasta`)
 
 ### 
-**Figure 1.** Low coverage region on contig 11. Both barcode01 and barcode05 show very low or no alignments, suggesting a possible assembly gap or unmappable region.
+**Figure 1.** Low coverage region on contig 11. Both barcode01 and barcode05 show very low or no alignments, suggesting a possible assembly gap or unmappable region. 
 
 ###
 **Figure 2.** Normal coverage region on contig 9. Barcode01 and barcode05 show well-aligned reads with relatively even depth and minimal mismatches.
