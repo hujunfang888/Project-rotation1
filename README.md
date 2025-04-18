@@ -84,6 +84,41 @@ conda install -c bioconda bandage
 
 ---
 
+# IGV Visualisation of barcode01 and barcode05
+
+This folder contains IGV screenshots comparing long-read and Illumina short-read alignments for barcode01 and barcode05. The goal is to highlight structural and coverage differences between the two samples.
+
+---
+
+##  Illumina comparison (short reads)
+
+**Reference contig:** `NODE_1_length_298171`  
+**Region visualised:** `1–50,000 bp`  
+**Screenshot file:** `barcode01_vs_barcode05_illumina.png`
+
+**Observations:**
+- `barcode01` shows consistently high coverage.
+- `barcode05` displays several regions of low coverage and possible alignment gaps.
+
+**Interpretation:**  
+These differences may be due to structural variation or differences in assembly quality between the two samples.
+
+---
+
+## Long-read comparison (Nanopore)
+
+**Reference contig:** `ENA|CP001953|CP001953.1`  
+**Region visualised:** `1–50,000 bp`  
+**Screenshot file:** `barcode01_vs_barcode05_longreads.png`
+
+**Observations:**
+- `barcode01` has dense, continuous long-read alignment.
+- `barcode05` exhibits fragmented coverage and multiple gaps.
+
+**Interpretation:**  
+This could indicate structural variants (e.g. deletions, insertions) or incomplete assembly regions in `barcode05`.
+
+---
 ## References
 
 - **Unicycler**: Wick RR, et al. (2017). *Unicycler: Resolving bacterial genome assemblies from short and long sequencing reads.* [PLOS Computational Biology](https://doi.org/10.1371/journal.pcbi.1005595)
