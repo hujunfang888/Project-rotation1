@@ -8,7 +8,8 @@ We performed genome assembly, annotation, structure comparison, and method evalu
 ## Navigation
 
 -  [Assembly Results & Bandage Graphs](./results.md)
--  [IGV Mapping Visualisation](./igv_visualisation/IGV_visualisation.md)
+-  [IGV Mapping Visualisation](./igv_visualisation/igv_visualisation.md)
+
 
 ---
 
