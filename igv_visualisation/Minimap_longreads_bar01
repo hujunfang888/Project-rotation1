@@ -1,6 +1,7 @@
 #note：For easy reading, all scripts are integrated by classification
 ------
 # minimap.sh
+
 #!/bin/bash
 
 #SBATCH --partition=defq
