@@ -1,3 +1,5 @@
+#note:In order to save time when performing BWA on barcode05, several steps were placed in the same script
+-----------
 #!/bin/bash
 #SBATCH --partition=defq
 #SBATCH --nodes=1
