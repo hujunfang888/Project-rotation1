@@ -66,7 +66,7 @@ All analyses were run in a Linux environment using SLURM. Environment variables 
 
 ## Data Overview
 
-In this project, we worked with two bacterial samples (barcode01 and barcode05), using both Illumina short reads and Nanopore long reads. We also performed hybrid assemblies by combining the two datasets. For the alignment steps, Illumina and Nanopore reads were mapped separately to allow clearer comparison of read coverage and mapping quality.
+In this project, we analysed two bacterial isolates (barcode01 and barcode05) using both Illumina short reads and Nanopore long reads. Hybrid assemblies were also performed by combining both datasets. For alignment and visualisation, Illumina and Nanopore reads were mapped separately to allow clearer comparison of read coverage and structural differences.
 
 | Data Type       | Format                    | Description                                                                 |
 |------------------|----------------------------|------------------------------------------------------------------------------|
@@ -74,7 +74,7 @@ In this project, we worked with two bacterial samples (barcode01 and barcode05),
 | Assembly graphs  | `.gfa`                    | Graphs from Unicycler/SPAdes used for Bandage visualisation                 |
 | Genome assemblies| `.fasta`                  | Final assembled contigs for each strategy (Illumina, long-read, hybrid)     |
 | Annotations      | `.gff`, `.txt`            | Gene annotation outputs from Prokka (CDS, rRNA, tRNA, summary)              |
-| Alignments       | `.bam`, `.bai`            | Alignments of raw reads to assemblies using BWA (short-read) and minimap2 (long-read) |
+| Alignments       | `.bam`, `.bai`            | Alignments of raw reads to assemblies using BWA (Illumina) and minimap2 (long-read) |
 | Visualisations   | `.png`                    | Screenshots from Bandage and IGV, stored in `figures/` and `igv_visualisation/` |
 
 
@@ -84,7 +84,7 @@ In this project, we worked with two bacterial samples (barcode01 and barcode05),
 
 ### Input files
 
-This project used Illumina and Nanopore sequencing data for two bacterial samples (barcode01 and barcode05), followed by multiple assemblies and reference-based comparisons.
+This project used Illumina and Nanopore sequencing data for two bacterial samples, barcode01 and barcode05. These were processed for Illumina-only, long-read-only, and hybrid genome assembly pipelines.
 
 | File | Description |
 |------|-------------|
@@ -94,13 +94,16 @@ This project used Illumina and Nanopore sequencing data for two bacterial sample
 | `bar5merged_reverse.fastq.gz` | Illumina reverse reads (barcode05) |
 | `Merged_pass.fastq.gz` | Nanopore long reads (barcode01) |
 | `bar5_pass_merged.fastq.gz` | Nanopore long reads (barcode05) |
-| `001_spades_graph_k069.gfa` | Illumina-only assembly graph (barcode05, from SPAdes) |
-| `Long_read_assemble/output_dir/assembly.gfa` | Long-read assembly graph (barcode01, for Bandage) |
+| `001_spades_graph_k069.gfa` | Assembly graph from SPAdes (barcode05 – Illumina-only) |
+| `Long_read_assemble/output_dir/assembly.gfa` | Assembly graph from LRA (barcode01 – long-read) |
 | `Long_read_assemble/output_dir/assembly.fasta` | Long-read assembly contigs (barcode01) |
 | `Bar5/long_assembly/pass_lra/assembly.fasta` | Long-read assembly contigs (barcode05) |
-| `Illumina/pass_hybrid/assembly.fasta` | Hybrid assembly output (barcode01, Unicycler) |
-| `Bar5/pass_hybrid_bar5/assembly.fasta` | Hybrid assembly output (barcode05, Unicycler) |
-| `CP001953.1.fasta` | NCBI reference genome used for long-read mapping in IGV |
+| `Illumina/pass_hybrid/assembly.fasta` | Hybrid assembly (barcode01 – Unicycler) |
+| `Bar5/pass_hybrid_bar5/assembly.fasta` | Hybrid assembly (barcode05 – Unicycler) |
+| `CP001953.1.fasta` | NCBI reference genome used for long-read alignment in IGV |
+| `bar5output_rerun/assembly_bar05.fasta` | Contigs extracted from `.gfa` (barcode05 – Illumina-only) |
+| `Illumina/pass_illumina/assembly.fasta` | Illumina-only assembly (barcode01, from Unicycler) |
+
 
 ###  Output files
 
@@ -115,11 +118,12 @@ Output files include annotation results, assembly evaluation, read alignments, a
 | `PROKKA_02072025.gff` / `.txt` | Prokka output (barcode01 – Illumina-only) |
 | `PROKKA_02062025.gff` / `.txt` | Prokka output (barcode01 – long-read) |
 | `PROKKA_02132025.gff` / `.txt` | Prokka output (barcode01 – hybrid) |
-| `quast/report.txt` | QUAST summary metrics for assemblies (contigs, N50, GC%) |
-| `*.bam` / `*.bai` | Read alignments from BWA (Illumina) or minimap2 (long-read) |
-| `bandage_*.png` | Assembly graph visualisations from Bandage |
-| `igv_visualisation/Figure1–5.png` | IGV screenshots comparing barcode01 and barcode05 |
-
+| `quast/report.txt` | QUAST summary (contigs, total length, N50, GC%) |
+| `*.bam` / `*.bai` | Read alignments from BWA (Illumina) and Minimap2 (Nanopore) |
+| `figures/bandage_*.png` | Bandage assembly graph visualisations (6 strategies × samples) |
+| `igv_visualisation/Figure1–5.png` | IGV coverage screenshots (Illumina + long-read comparisons) |
+| `igv_visualisation/BWA_index_samtool_*.sh` | Scripts used for alignment and sorting of short-read data |
+| `igv_visualisation/Minimap_longreads_*.sh` | Scripts used for mapping long reads to CP001953.1 |
 
 ## Quality Control & Assembly Evaluation
 
