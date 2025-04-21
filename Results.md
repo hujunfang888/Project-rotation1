@@ -4,8 +4,6 @@ This file summarizes the genome assembly and annotation results for samples barc
 
 ## Contribution Statement
 
-## Contribution Statement
-
 This project involved collaborative work across other team members. Specific responsibilities were as follows:
 
 - **Quayyum Abdullahi**: Responsible for hybrid assembly, annotation, and quality control (QC) of barcode01 and barcode05.
