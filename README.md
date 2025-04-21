@@ -16,7 +16,6 @@ We performed genome assembly, annotation, structure comparison, and method evalu
 - [IGV Visualisation of barcode01 and barcode05](#igv-visualisation-of-barcode01-and-barcode05)
 - [References](#references)
 - [Author](#author)
--  [Assembly Results & Bandage Graphs](./figures.md)
 -  [IGV Mapping Visualisation](./igv_visualisation/igv_visualisation.md)
 
 ---
@@ -70,7 +69,7 @@ In this project, we analysed two bacterial isolates (barcode01 and barcode05) us
 
 | Data Type       | Format                    | Description                                                                 |
 |------------------|----------------------------|------------------------------------------------------------------------------|
-| Raw reads        | `.fastq.gz` (Illumina), `.fastq` (Nanopore) | Paired-end Illumina reads and Nanopore long reads for both barcode01 and barcode05 |
+| Raw reads        | `.fastq.gz` , `.fastq` | Paired-end Illumina reads and Nanopore long reads for both barcode01 and barcode05 |
 | Assembly graphs  | `.gfa`                    | Graphs from Unicycler/SPAdes used for Bandage visualisation                 |
 | Genome assemblies| `.fasta`                  | Final assembled contigs for each strategy (Illumina, long-read, hybrid)     |
 | Annotations      | `.gff`, `.txt`            | Gene annotation outputs from Prokka (CDS, rRNA, tRNA, summary)              |
@@ -101,8 +100,8 @@ This project used Illumina and Nanopore sequencing data for two bacterial sample
 | `Illumina/pass_hybrid/assembly.fasta` | Hybrid assembly (barcode01 – Unicycler) |
 | `Bar5/pass_hybrid_bar5/assembly.fasta` | Hybrid assembly (barcode05 – Unicycler) |
 | `CP001953.1.fasta` | NCBI reference genome used for long-read alignment in IGV |
-| `bar5output_rerun/assembly_bar05.fasta` | Contigs extracted from `.gfa` (barcode05 – Illumina-only) |
-| `Illumina/pass_illumina/assembly.fasta` | Illumina-only assembly (barcode01, from Unicycler) |
+| `bar5output_rerun/assembly_bar05.fasta` | Contigs extracted from `.gfa` (barcode05 – Illumina) |
+| `Illumina/pass_illumina/assembly.fasta` | Illumina assembly (barcode01, from Unicycler) |
 
 
 ###  Output files
@@ -120,9 +119,9 @@ Output files include annotation results, assembly evaluation, read alignments, a
 | `PROKKA_02132025.gff` / `.txt` | Prokka output (barcode01 – hybrid) |
 | `quast/report.txt` | QUAST summary (contigs, total length, N50, GC%) |
 | `*.bam` / `*.bai` | Read alignments from BWA (Illumina) and Minimap2 (Nanopore) |
-| `figures/bandage_*.png` | Bandage assembly graph visualisations (6 strategies × samples) |
-| `igv_visualisation/Figure1–5.png` | IGV coverage screenshots (Illumina + long-read comparisons) |
-| `igv_visualisation/BWA_index_samtool_*.sh` | Scripts used for alignment and sorting of short-read data |
+| `figures/bandage_*.png` | Bandage assembly graph visualisations (6 samples) |
+| `igv_visualisation/Figure1–5.png` | IGV coverage screenshots (Illumina,long-read comparisons) |
+| `igv_visualisation/BWA_index_samtool_*.sh` | Scripts used for alignment and sorting of Illumina data |
 | `igv_visualisation/Minimap_longreads_*.sh` | Scripts used for mapping long reads to CP001953.1 |
 
 ## Quality Control & Assembly Evaluation
@@ -131,8 +130,6 @@ Output files include annotation results, assembly evaluation, read alignments, a
 
 - [Forward reads (barcode01)](https://hujunfang888.github.io/Project-rotation1/merged_forward_fastqc.html)
 - [Reverse reads (barcode01)](https://hujunfang888.github.io/Project-rotation1/merged_reverse_fastqc.html)
-- [MultiQC summary](https://hujunfang888.github.io/Project-rotation1/fastqc_report.html)
-
 
 **QUAST Assembly Reports:**
 
@@ -181,7 +178,6 @@ Alignment results were visualised using IGV and are summarised in：
 All alignment steps include indexing (`bwa index` / `samtools index`), sorting, and `.bam` file generation.
 
 All scripts used to generate `.bam` files for IGV inspection are stored in the [`igv_visualisation/`](./igv_visualisation/) directory. These include:
-
 - `BWA_index_samtool_illumina_bar1`: Aligns barcode01 Illumina reads to bar05 assembly using BWA and SAMtools.
 - `BWA_index_samtool_illumina_bar05`: Aligns barcode05 Illumina reads to bar05 assembly.
 - `Minimap_longreads_bar01`: Maps barcode01 long reads to NCBI reference genome CP001953.1.
