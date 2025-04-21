@@ -164,7 +164,6 @@ This hybrid assembly displays a complete circular contig along with two accessor
 
 ## File References
 
-All result files, QUAST reports, Bandage screenshots, and Prokka outputs are located in the `results/`, `qc_reports/`, and `prokka_*` directories of this repository.
-
+QUAST summaries, Bandage visualisations, IGV screenshots, and Prokka `.gff` outputs are all included in the `figures/`, `igv_visualisation/`, and documented in `results.md`.  
 This document was written based on direct observation of the assemblies and graph structures, aiming for clarity and objectivity without overinterpreting limited datasets.
 
