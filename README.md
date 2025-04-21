@@ -1,4 +1,4 @@
-#  Group 1 – Barcode01 & Barcode05 Genome Project
+# Group 1 – Barcode01 & Barcode05 Genome Project
 
 This repository contains all scripts, results, and documentation for the analysis of barcode01 and barcode05 using Illumina-only, long-read (ONT), and hybrid assembly methods.
 
@@ -7,8 +7,18 @@ We performed genome assembly, annotation, structure comparison, and method evalu
 
 ## Navigation
 
+- [Introduction](#introduction)
+- [Installation](#installation)
+- [Data Overview](#data-overview)
+- [Data](#data)
+- [Output files](#output-files)
+- [Quality Control & Assembly Evaluation](#quality-control--assembly-evaluation)
+- [IGV Visualisation of barcode01 and barcode05](#igv-visualisation-of-barcode01-and-barcode05)
+- [References](#references)
+- [Author](#author)
 -  [Assembly Results & Bandage Graphs](./results.md)
 -  [IGV Mapping Visualisation](./igv_visualisation/igv_visualisation.md)
+
 
 
 ---
