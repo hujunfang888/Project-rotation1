@@ -10,7 +10,7 @@ We did not perform separate FastQC or QUAST quality control for barcode05 due to
 
 ## Barcode01 – Hybrid 
 
-- **# contigs**: 3  
+- **contigs**: 3  
 - **Total length**: 4,009,219 bp  
 - **N50**: 3,486,218 bp  
 - **Largest contig**: 3,486,218 bp  
@@ -27,7 +27,7 @@ We did not perform separate FastQC or QUAST quality control for barcode05 due to
 
 ## Barcode01 – Illumina(fastqc)
 
-- **# contigs**: 98  
+- **contigs**: 98  
 - **Total length**: 3,880,724 bp  
 - **N50**: 167,656 bp  
 - **Largest contig**: 298,171 bp  
@@ -40,7 +40,7 @@ We did not perform separate FastQC or QUAST quality control for barcode05 due to
 
 ## Barcode01 – Long-read
 
-- **# contigs**: 3  
+- **contigs**: 3  
 - **Total length**: 4,008,716 bp  
 - **N50**: 3,485,407 bp  
 - **Largest contig**: 3,485,407 bp  
