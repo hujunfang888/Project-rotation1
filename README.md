@@ -140,8 +140,10 @@ Output files include annotation results, assembly evaluation, read alignments, a
 ---
 
 # IGV Visualisation of barcode01 and barcode05
-
+Alignment results were visualised using IGV and are summarised in：
 [IGV visualisation summary (barcode01 & barcode05)](./igv_visualisation/igv_visualisation.md)
+
+All alignment steps include indexing (`bwa index` / `samtools index`), sorting, and `.bam` file generation.
 
 All scripts used to generate `.bam` files for IGV inspection are stored in the [`igv_visualisation/`](./igv_visualisation/) directory. These include:
 
@@ -149,11 +151,6 @@ All scripts used to generate `.bam` files for IGV inspection are stored in the [
 - `BWA_index_samtool_illumina_bar05`: Aligns barcode05 Illumina reads to bar05 assembly.
 - `Minimap_longreads_bar01`: Maps barcode01 long reads to NCBI reference genome CP001953.1.
 - `Minimap_longreads_bar05`: Maps barcode05 long reads to the same reference.
-
-All alignment steps include indexing (`bwa index` / `samtools index`), sorting, and `.bam` file generation.
-
-Alignment results were visualised using IGV and are summarised in  
- [`igv_visualisation/igv_visualisation.md`](./igv_visualisation/igv_visualisation.md)
 
 ---
 
