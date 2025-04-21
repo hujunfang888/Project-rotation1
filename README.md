@@ -16,7 +16,7 @@ We performed genome assembly, annotation, structure comparison, and method evalu
 - [IGV Visualisation of barcode01 and barcode05](#igv-visualisation-of-barcode01-and-barcode05)
 - [References](#references)
 - [Author](#author)
--  [Assembly Results & Bandage Graphs](./results.md)
+-  [Assembly Results & Bandage Graphs](./figures.md)
 -  [IGV Mapping Visualisation](./igv_visualisation/igv_visualisation.md)
 
 ---
