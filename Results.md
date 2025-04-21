@@ -1,6 +1,15 @@
 # Results Summary – Barcode01 & Barcode05
 
 This file summarizes the genome assembly and annotation results for samples barcode01 and barcode05 across different sequencing strategies. Results include contiguity statistics (QUAST), gene annotation (Prokka), and visual inspection of assembly graphs (Bandage).
+
+## Contribution Statement
+
+This project involved collaborative work across different team members. Specific responsibilities were as follows:
+
+- **Quayyum Abdullahi**: Responsible for hybrid assembly, annotation, and quality control (QC) of barcode01 and barcode05.
+- **Samuel Swane**: Responsible for long-read assembly, annotation, QC, and Minimap2-based alignment of barcode01 and barcode05.
+- **Junfang Hu**: Responsible for Illumina-only assembly, annotation, QC, BWA alignment scripts, and all visualisation work (Bandage and IGV) for barcode01 and barcode05.
+
 ---
 
 ## IGV Visualisation & Alignment Scripts
