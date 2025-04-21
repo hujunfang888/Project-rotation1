@@ -1,6 +1,24 @@
 # Results Summary – Barcode01 & Barcode05
 
 This file summarizes the genome assembly and annotation results for samples barcode01 and barcode05 across different sequencing strategies. Results include contiguity statistics (QUAST), gene annotation (Prokka), and visual inspection of assembly graphs (Bandage).
+---
+
+## IGV Visualisation & Alignment Scripts
+
+IGV was used to compare barcode01 and barcode05 at specific genomic regions. All read alignments were performed using BWA (for Illumina reads) and Minimap2 (for long reads). Final `.bam` and `.bai` files were loaded in IGV along with the relevant assemblies or reference genome.
+
+### Available scripts (see [`igv_visualisation/`](./igv_visualisation/)):
+
+| Script | Description |
+|--------|-------------|
+| `BWA_index_samtool_illumina_bar1` | Aligns barcode01 Illumina reads to barcode05 assembly (BWA + samtools) |
+| `BWA_index_samtool_illumina_bar05` | Aligns barcode05 Illumina reads to its own assembly |
+| `Minimap_longreads_bar01` | Aligns barcode01 long reads to CP001953.1 reference |
+| `Minimap_longreads_bar05` | Aligns barcode05 long reads to CP001953.1 reference |
+| `igv_visualisation.md` | Screenshots and interpretation of five key genomic regions |
+
+Summary of visual findings available here:  
+[`IGV Visualisation Report`](./igv_visualisation/igv_visualisation.md)
 
 ---
 
