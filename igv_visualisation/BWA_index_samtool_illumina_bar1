@@ -1,0 +1,91 @@
+#here is script of index
+
+#!/bin/bash
+#SBATCH --partition=defq
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=8
+#SBATCH --mem=100g
+#SBATCH --time=02:00:00
+#SBATCH --job-name=my_job
+#SBATCH --output=/share/BioinfMSc/rotation1/Group1/bash_scripts/slurm-%x-%j.out
+#SBATCH --error=/share/BioinfMSc/rotation1/Group1/bash_scripts/slurm-%x-%j.err
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=alyjh38@nottingham.ac.uk
+
+source $HOME/.bash_profile
+
+conda activate bwa_env
+
+bwa index /share/BioinfMSc/rotation1/Group1/Illumina/output_dir/assembly.fasta
+
+conda deactivate
+
+-------
+#here is script of sam 
+
+#!/bin/bash
+#SBATCH --partition=defq
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=8
+#SBATCH --mem=100g
+#SBATCH --time=02:00:00
+#SBATCH --job-name=sam2bam_bar1
+#SBATCH --output=/share/BioinfMSc/rotation1/Group1/bash_scripts/slurm-%x-%j.out
+#SBATCH --error=/share/BioinfMSc/rotation1/Group1/bash_scripts/slurm-%x-%j.err
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=alyjh38@nottingham.ac.uk
+
+source $HOME/.bash_profile
+conda activate bwa_env
+
+REF="/share/BioinfMSc/rotation1/Group1/Illumina/output_dir/assembly.fasta"
+R1="/share/BioinfMSc/rotation1/Group1/Illumina/merged_forward.fastq.gz"
+R2="/share/BioinfMSc/rotation1/Group1/Illumina/merged_reverse.fastq.gz"
+OUTDIR="/share/BioinfMSc/rotation1/Group1/Illumina/mapping_bar1"
+SAM="${OUTDIR}/barcode01.sam"
+
+mkdir -p $OUTDIR
+
+bwa mem $REF $R1 $R2 > $SAM
+
+conda deactivate
+
+-------
+#here is script of sam to bam
+
+#!/bin/bash
+#SBATCH --partition=defq
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=8
+#SBATCH --mem=100g
+#SBATCH --time=02:00:00
+#SBATCH --job-name=sam2bam_bar1
+#SBATCH --output=/share/BioinfMSc/rotation1/Group1/bash_scripts/slurm-%x-%j.out
+#SBATCH --error=/share/BioinfMSc/rotation1/Group1/bash_scripts/slurm-%x-%j.err
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=alyjh38@nottingham.ac.uk
+
+source $HOME/.bash_profile
+
+conda activate bwa_env
+
+REF="/share/BioinfMSc/rotation1/Group1/Illumina/output_dir/assembly.fasta"
+OUTDIR="/share/BioinfMSc/rotation1/Group1/Illumina/mapping_bar1"
+SAM="${OUTDIR}/barcode01.sam"
+BAM="${OUTDIR}/barcode01_sorted.bam"
+
+samtools view -@ 8 -Sb $SAM | samtools sort -@ 8 -o $BAM
+
+samtools index $BAM
+
+samtools faidx $REF
+
+conda deactivate
+
+
+
+
+
