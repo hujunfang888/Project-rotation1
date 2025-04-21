@@ -19,8 +19,6 @@ We performed genome assembly, annotation, structure comparison, and method evalu
 -  [Assembly Results & Bandage Graphs](./results.md)
 -  [IGV Mapping Visualisation](./igv_visualisation/igv_visualisation.md)
 
-
-
 ---
 
 ## Introduction
@@ -138,8 +136,41 @@ Output files include annotation results, assembly evaluation, read alignments, a
 - [Hybrid assembly (barcode01)](https://hujunfang888.github.io/Project-rotation1/QUAST_hybrid.html)
 
 ---
+## Bandage Assembly Graph Visualisation
 
-# IGV Visualisation of barcode01 and barcode05
+Assembly graphs in `.gfa` format were visualised using Bandage to assess genome structure and contiguity.
+
+ **Input files**:  
+   - Illumina: `001_spades_graph_k069.gfa` (barcode05)  
+   - Long-read assemblies: `assembly.gfa` (from LRA output for barcode01 and barcode05)
+**Steps performed**:  
+   - Opened `.gfa` file in Bandage GUI  
+   - Selected `Entire Graph` under drawing scope  
+   - Toggled node labels for **Name**, **Length**, and **Depth**  
+   - Used "Single" style layout with adjusted zoom and width  
+   - Exported visualisation as `.png`
+**Output**:  
+   - Screenshots saved to `figures/` (e.g., `bandage_longreads_bar01.png`)  
+   - Compared structures across samples and strategies (fragmentation, circular contigs)
+
+---
+
+## IGV Visualisation of barcode01 and barcode05
+
+### IGV Alignment Inspection
+1. **BAM file generation**:
+   - Illumina reads aligned to `assembly_bar05.fasta` using `bwa mem`  
+   - Long reads mapped to `CP001953.1.fasta` using `minimap2`  
+   - Sorted and indexed using `samtools`
+2. **Files loaded into IGV**:
+   - `assembly_bar05.fasta` or `CP001953.1.fasta` as reference  
+   - Corresponding `.sorted.bam` and `.bai` files (barcode01 and barcode05)
+3. **Manual steps in IGV**:
+   - Opened reference genome in IGV  
+   - Loaded alignments from both samples  
+   - Navigated to selected contigs/coordinates (e.g., contig_11, 1–50,000 bp)  
+   - Took screenshots of normal, low, and high coverage regions
+4. **Output**:
 Alignment results were visualised using IGV and are summarised in：
 [IGV visualisation summary (barcode01 & barcode05)](./igv_visualisation/igv_visualisation.md)
 
@@ -151,6 +182,9 @@ All scripts used to generate `.bam` files for IGV inspection are stored in the [
 - `BWA_index_samtool_illumina_bar05`: Aligns barcode05 Illumina reads to bar05 assembly.
 - `Minimap_longreads_bar01`: Maps barcode01 long reads to NCBI reference genome CP001953.1.
 - `Minimap_longreads_bar05`: Maps barcode05 long reads to the same reference.
+
+Both Bandage and IGV were used to visually assess genome contiguity and read alignment quality.  
+All manual steps were performed consistently and are documented with screenshots and scripts.
 
 ---
 
