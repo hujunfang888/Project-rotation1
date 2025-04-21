@@ -1,0 +1,105 @@
+# minimap.sh
+#!/bin/bash
+
+#SBATCH --partition=defq
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=8
+#SBATCH --mem=100g
+#SBATCH --time=02:00:00
+#SBATCH --job-name=my_job
+#SBATCH --output=/share/BioinfMSc/rotation1/Group1/bash_scripts/slurm-%x-%j.out
+#SBATCH --error=/share/BioinfMSc/rotation1/Group1/bash_scripts/slurm-%x-%j.err
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=mbxss28@nottingham.ac.uk
+
+source $HOME/.bash_profile
+
+conda activate minimap
+
+minimap2 -a refMerged.fasta Merged_pass.fastq.gz > output.sam
+
+conda deactivate
+
+------
+#minimap-index.sh
+
+#!/bin/bash
+#SBATCH --partition=defq
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=8
+#SBATCH --mem=100g
+#SBATCH --time=02:00:00
+#SBATCH --job-name=my_job
+#SBATCH --output=/share/BioinfMSc/rotation1/Group1/bash_scripts/slurm-%x-%j.out
+#SBATCH --error=/share/BioinfMSc/rotation1/Group1/bash_scripts/slurm-%x-%j.err
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=mbxss28@nottingham.ac.uk
+
+source $HOME/.bash_profile
+
+conda activate Samtool
+
+samtools view -b -S assembly.sam > assembly.bam
+
+samtools sort assembly.bam > assembly_sort
+
+samtools index assembly_sort
+
+conda deactivate 
+
+------
+# SAM_to_BAM.sh
+
+#!/bin/bash
+
+#SBATCH --partition=defq
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=8
+#SBATCH --mem=100g
+#SBATCH --time=06:00:00
+#SBATCH --job-name=my_job
+#SBATCH --output=/share/BioinfMSc/Bill_resources/Tbrucei/fastq/Group2/bash_output/slurm-%x-%j.out
+#SBATCH --error=/share/BioinfMSc/Bill_resources/Tbrucei/fastq/Group2/bash_output/slurm-%x-%j.err
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=mbxss28@nottingham.ac.uk
+
+source $HOME/.bash_profile
+
+conda activate bowtie2
+
+samtools view -S -b  output.sam > output.bam
+
+conda deactivate
+
+------
+#sort.sh
+
+#!/bin/bash
+#SBATCH --partition=defq
+#SBATCH --nodes=1
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=8
+#SBATCH --mem=100g
+#SBATCH --time=02:00:00
+#SBATCH --job-name=my_job
+#SBATCH --output=/share/BioinfMSc/rotation1/Group1/bash_scripts/slurm-%x-%j.out
+#SBATCH --error=/share/BioinfMSc/rotation1/Group1/bash_scripts/slurm-%x-%j.err
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=mbxss28@nottingham.ac.uk
+
+source $HOME/.bash_profile
+
+conda activate Samtool
+
+samtools sort output.bam > output_sorted.bam 
+
+conda deactivate
+
+
+
+
+
+
