@@ -1,4 +1,4 @@
-#here is script of index
+#here is script of index.sh
 
 #!/bin/bash
 #SBATCH --partition=defq
@@ -22,7 +22,7 @@ bwa index /share/BioinfMSc/rotation1/Group1/Illumina/output_dir/assembly.fasta
 conda deactivate
 
 -------
-#here is script of sam 
+#here is script of sam.sh
 
 #!/bin/bash
 #SBATCH --partition=defq
@@ -53,7 +53,7 @@ bwa mem $REF $R1 $R2 > $SAM
 conda deactivate
 
 -------
-#here is script of sam to bam
+#here is script of sam to bam.sh
 
 #!/bin/bash
 #SBATCH --partition=defq
